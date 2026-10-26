@@ -1,0 +1,26 @@
+appId: com.aiops.agent
+productName: AI Ops Agent
+directories:
+  buildResources: resources
+# resources/icon.png（透明底 1024）→ 自动生成 mac icns / win ico
+icon: icon.png
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.*'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+win:
+  target:
+    - nsis
+mac:
+  target:
+    - dmg
+  entitlementsInherit: resources/entitlements.mac.plist
+linux:
+  target:
+    - AppImage
+  category: Utility
+npmRebuild: false

@@ -1,0 +1,205 @@
+:root {
+  --bg: #0f1419;
+  --bg-elevated: #1a2332;
+  --bg-soft: #243044;
+  --border: #2d3a4f;
+  --text: #e8eef7;
+  --text-muted: #8b9bb4;
+  --accent: #3d9cf0;
+  --accent-soft: rgba(61, 156, 240, 0.15);
+  --success: #3ecf8e;
+  --warning: #f0b429;
+  --danger: #f07178;
+  --radius: 10px;
+  font-family: 'IBM Plex Sans', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+
+  /* 对齐 Element Plus 暗色变量，避免表格/弹层仍是白底 */
+  --el-bg-color: var(--bg-elevated);
+  --el-bg-color-overlay: #1e293b;
+  --el-bg-color-page: var(--bg);
+  --el-text-color-primary: var(--text);
+  --el-text-color-regular: #c5d0e0;
+  --el-text-color-secondary: var(--text-muted);
+  --el-text-color-placeholder: #6b7a94;
+  --el-border-color: var(--border);
+  --el-border-color-light: #334155;
+  --el-border-color-lighter: #3a4a63;
+  --el-border-color-extra-light: #243044;
+  --el-fill-color: #243044;
+  --el-fill-color-light: #1e2a3c;
+  --el-fill-color-lighter: #182233;
+  --el-fill-color-blank: var(--bg-elevated);
+  --el-fill-color-dark: #2d3a4f;
+  --el-mask-color: rgba(8, 12, 20, 0.72);
+  --el-color-primary: var(--accent);
+  --el-color-primary-light-3: #5aadf5;
+  --el-color-primary-light-5: #7ebef7;
+  --el-color-primary-light-7: #a8d3fa;
+  --el-color-primary-light-8: #c2e0fc;
+  --el-color-primary-light-9: var(--accent-soft);
+  --el-color-primary-dark-2: #2f7fc7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--accent);
+  --el-button-border-color: var(--accent);
+  --el-button-hover-bg-color: #5aadf5;
+  --el-button-hover-border-color: #5aadf5;
+}
+
+.el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: #152032;
+  --el-table-row-hover-bg-color: rgba(61, 156, 240, 0.1);
+  --el-table-border-color: var(--border);
+  --el-table-text-color: var(--text);
+  --el-table-header-text-color: var(--text-muted);
+  --el-table-current-row-bg-color: rgba(61, 156, 240, 0.12);
+  background: transparent !important;
+  color: var(--text);
+}
+
+.el-table th.el-table__cell,
+.el-table td.el-table__cell {
+  background-color: transparent !important;
+}
+
+.el-table__header-wrapper th.el-table__cell {
+  background-color: #152032 !important;
+}
+
+.el-table__empty-block {
+  background: transparent;
+}
+
+.el-table__body tr:hover > td.el-table__cell {
+  background-color: rgba(61, 156, 240, 0.1) !important;
+}
+
+.el-dialog,
+.el-message-box {
+  --el-dialog-bg-color: var(--bg-elevated);
+  background: var(--bg-elevated) !important;
+}
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper {
+  background-color: #121a26 !important;
+  box-shadow: 0 0 0 1px var(--border) inset !important;
+}
+
+.el-tabs__item {
+  color: var(--text-muted);
+}
+
+.el-tabs__item.is-active {
+  color: var(--accent);
+}
+
+.el-menu {
+  --el-menu-bg-color: transparent;
+  --el-menu-text-color: var(--text-muted);
+  --el-menu-hover-bg-color: var(--accent-soft);
+  --el-menu-active-color: var(--accent);
+}
+
+.el-popper.is-light,
+.el-dropdown-menu,
+.el-select-dropdown,
+.el-picker__popper {
+  background: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.el-select-dropdown__item,
+.el-dropdown-menu__item {
+  color: var(--text);
+}
+
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background: var(--accent-soft) !important;
+}
+
+.el-message {
+  --el-message-bg-color: var(--bg-elevated);
+  --el-message-border-color: var(--border);
+  background: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+}
+
+.el-breadcrumb__inner,
+.el-breadcrumb__separator {
+  color: var(--text-muted) !important;
+}
+
+.el-loading-mask {
+  background-color: rgba(15, 20, 25, 0.72) !important;
+}
+
+.el-radio {
+  --el-radio-text-color: var(--text);
+}
+
+.el-slider__runway {
+  background-color: var(--bg-soft);
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.page-header p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.card-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+}
